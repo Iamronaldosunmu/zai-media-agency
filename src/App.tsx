@@ -13,6 +13,9 @@ import ContactUs from "./Pages/ContactUs";
 import ServicesAndPricing from "./Pages/ServicesAndPricing";
 import OurClients from "./Pages/OurClients";
 import { AnimatePresence } from "framer-motion";
+import Loader from "./components/Loader";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const location = useLocation();
@@ -20,9 +23,12 @@ function App() {
     setTimeout(() => window.scrollTo(0, 0), 300)
     
   }, [location.pathname]);
+
+
   return (
     <div className="App">
-      <NavBar />
+      <ToastContainer />
+      {location.pathname != "/" && <NavBar />}
       <AnimatePresence mode="wait">
         <Routes key={location.pathname} location={location}>
           <Route path="/home" element={<Home />} />
@@ -33,9 +39,10 @@ function App() {
             element={<ServicesAndPricing />}
           />
           <Route path="our-clients" element={<OurClients />} />
+          <Route path="/" element={<Loader />} />
         </Routes>
       </AnimatePresence>
-      <Footer />
+      {location.pathname != "/" && <Footer />}
     </div>
   );
 }
