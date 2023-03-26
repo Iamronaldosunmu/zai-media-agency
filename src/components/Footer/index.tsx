@@ -4,7 +4,11 @@ import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <footer className="flex flex-col mt-[65px] lg:mt-[180px] gap-[28px] px-[20px] mb-[84px] lg:mb-[20px] max-w-[1440px] mx-auto lg:pr-[60px]">
+    <motion.footer
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 1 } }}
+      className="flex flex-col mt-[65px] lg:mt-[180px] gap-[28px] px-[20px] mb-[84px] lg:mb-[20px] max-w-[1440px] mx-auto lg:pr-[60px]"
+    >
       <div
         className="flex justify-center items-center lg:hidden
         "
@@ -43,13 +47,22 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-[14px] lg:text-[18px] h-[100px] lg:h-[140px] flex flex-col justify-between items-center">
-          <p className="cursor-pointer transition duration-200 hover:scale-[1.05]" onClick={() => navigate("/home")}>
+          <p
+            className="cursor-pointer transition duration-200 hover:scale-[1.05]"
+            onClick={() => navigate("/home")}
+          >
             Home
           </p>
-          <p className="cursor-pointer transition duration-200 hover:scale-[1.05]" onClick={() => navigate("/about-us")}>
+          <p
+            className="cursor-pointer transition duration-200 hover:scale-[1.05]"
+            onClick={() => navigate("/about-us")}
+          >
             About Us
           </p>
-          <p className="cursor-pointer transition duration-200 hover:scale-[1.05]" onClick={() => navigate("/our-clients")}>
+          <p
+            className="cursor-pointer transition duration-200 hover:scale-[1.05]"
+            onClick={() => navigate("/our-clients")}
+          >
             Our Clients
           </p>
           <p
@@ -58,12 +71,15 @@ const Footer = () => {
           >
             Services & Pricing
           </p>
-          <p className="cursor-pointer transition duration-200 hover:scale-[1.05]" onClick={() => navigate("/contact-us")}>
+          <p
+            className="cursor-pointer transition duration-200 hover:scale-[1.05]"
+            onClick={() => navigate("/contact-us")}
+          >
             Contact Us
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
