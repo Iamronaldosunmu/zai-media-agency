@@ -20,7 +20,7 @@ const Footer = () => {
           className="flex justify-center items-center gap-[5px] border-b underline"
         >
           <img className="w-[20px] h-[20px]" src="/instagramIcon.png" />
-          <p className="font-bold">:@zaimedaagency</p>
+          <p className="font-bold">@zaimedaagency</p>
         </a>
       </div>
 
@@ -32,8 +32,12 @@ const Footer = () => {
           />
           <div className="flex flex-col lg:h-[140px] lg:justify-between">
             <p>Lagos, Nigeria</p>
-            <a className="" href="mailto:zaimediaagency@gmail.com">
-              zaimedaagency@gmail.com
+            <a
+              className="flex items-center gap-[5px]"
+              href="mailto:zaimediaagency@gmail.com"
+            >
+              <img className="w-[20px] h-[20px] " src="/mailIcon.png" />
+              <span>zaimedaagency@gmail.com</span>
             </a>
             <a
               href="https:instagram.com/zaimediaagency"
@@ -42,7 +46,7 @@ const Footer = () => {
               className="lg:flex items-center gap-[5px] hidden "
             >
               <img className="w-[20px] h-[20px]" src="/instagramIcon.png" />
-              <p className="">:@zaimedaagency</p>
+              <p className="">@zaimedaagency</p>
             </a>
           </div>
         </div>
