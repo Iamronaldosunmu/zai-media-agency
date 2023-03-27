@@ -21,7 +21,7 @@ const OurClients = () => {
           increasingly crowded digital landscape, and we are proud to have
           played a part in their success.
         </p>
-        <p>Here are just a few of the clients we have worked with:</p>
+        <p>Here are just a few of the clients we have worked with</p>
       </article>
       <section className="w-full grid grid-cols-1 max-w-[400px] lg:max-w-none mx-auto gap-[50px] lg:grid-cols-3 lg:gap-[30px] xl:gap-[50px] mt-[80px]">
         <ClientLogo
