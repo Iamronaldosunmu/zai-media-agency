@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const ServicesAndPricing = () => {
   const services = [
     { serviceText: "Creative Direction", subtext: "" },
-    { serviceText: "Content Creation", subtext: "(reels, campaigns, TikTok)" },
+    { serviceText: "Content Creation", subtext: "(reels, campaigns)" },
     { serviceText: "Campaign Shoot", subtext: "(Depends on the project)" },
     { serviceText: "Product Photography", subtext: "(Pictures or Reels)" },
     { serviceText: "Email Marketing", subtext: "" },
@@ -61,7 +61,7 @@ const ServicesAndPricing = () => {
           <PackageCard
             packageTitle="Bronze"
             features={[
-              "Content creation (reels, and TikTok)",
+              "Content creation (reels)",
               "User-generated content",
               "A monthly content calendar on Instagram",
               "one month social media report",
@@ -71,7 +71,7 @@ const ServicesAndPricing = () => {
           <PackageCard
             packageTitle="Silver"
             features={[
-              "Content creation (reels, and TikTok)",
+              "Content creation (reels)",
               "User-generated content",
               "A monthly content calendar on Instagram",
               "one month social media report",
@@ -82,12 +82,12 @@ const ServicesAndPricing = () => {
           <PackageCard
             packageTitle="Gold"
             features={[
-              "Content creation (reels, and TikTok)",
+              "Content creation (reels)",
               "User-generated content",
               "A monthly content calendar on Instagram",
               "one month social media report",
               "On-site Content Creation",
-              "Monthly Newsletter x3",
+              "Monthly Email Marketing",
               "Free Social Media Consultation & Strategy",
             ]}
             price="215,000"
