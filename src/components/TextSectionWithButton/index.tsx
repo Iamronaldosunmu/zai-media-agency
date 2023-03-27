@@ -54,7 +54,7 @@ const TextSectionWithButton: React.FC<TextSectionWithButtonProps> = ({
         {header}
       </header>
       {paragraphs.map((paragraph: string, index: number) => (
-        <p className="mb-[24px] lg:text-[19.5px] font-semibold text-[grey] text-center">
+        <p className="mb-[24px] md:text-[20px] lg:text-[19.5px] font-semibold text-[grey] text-center">
           {paragraph}
         </p>
       ))}

@@ -13,11 +13,11 @@ const Home = () => {
       exit={{ opacity: 0 }}
       className="px-[20px] lg:px-[60px] max-w-[1440px] mx-auto"
     >
-      <div className="lg:flex mt-[130px] lg:mt-[180px]">
-        <article className="lg:max-w-[727px]">
-          <header className="font-bold text-[36px] lg:text-[72px] lg:max-w-[727px]   text-center lg:text-left lg:leading-[88px]">
-            <div className="overflow-hidden justify-center lg:justify-start flex gap-x-[13px] lg:gap-x-[24px]">
-              {"Bringing your".split(" ").map((word: string, index: number) => (
+      <div className="xl:flex mt-[130px] lg:mt-[180px]">
+        <article className="xl:max-w-[727px]">
+          <header className="font-bold text-[32px] md:text-[48px] lg:text-[60px] xl:text-[72px] xl:max-w-[727px]   text-center lg:text-left lg:leading-[88px]">
+            <div className="overflow-hidden justify-center xl:justify-start flex gap-x-[11px] lg:gap-x-[24px]">
+              {"Ignite Your Social".split(" ").map((word: string, index: number) => (
                 <motion.div
                   initial={{ y: 80 }}
                   animate={{
@@ -33,8 +33,8 @@ const Home = () => {
                 </motion.div>
               ))}
             </div>
-            <div className="overflow-hidden justify-center lg:justify-start flex gap-x-[13px] lg:gap-x-[24px]">
-              {"brand to life, one"
+            <div className="overflow-hidden justify-center xl:justify-start flex gap-x-[11px] lg:gap-x-[24px]">
+              {"Media Presence"
                 .split(" ")
                 .map((word: string, index: number) => (
                   <motion.div
@@ -52,8 +52,8 @@ const Home = () => {
                   </motion.div>
                 ))}
             </div>
-            <div className="overflow-hidden justify-center lg:justify-start flex gap-x-[13px] lg:gap-x-[24px]">
-              {"like at a time"
+            <div className="overflow-hidden justify-center xl:justify-start flex gap-x-[11px] lg:gap-x-[24px]">
+              {"With Our Strategic"
                 .split(" ")
                 .map((word: string, index: number) => (
                   <motion.div
@@ -62,6 +62,25 @@ const Home = () => {
                       y: 0,
                       transition: {
                         duration: 1.34,
+                        delay: 0.2 + (index + 1) * 0.1,
+                        ease: [0.43, 0.13, 0.23, 0.96],
+                      },
+                    }}
+                  >
+                    {word}
+                  </motion.div>
+                ))}
+            </div>
+            <div className="overflow-hidden justify-center xl:justify-start flex gap-x-[11px] lg:gap-x-[24px]">
+              {"Expertise"
+                .split(" ")
+                .map((word: string, index: number) => (
+                  <motion.div
+                    initial={{ y: 80 }}
+                    animate={{
+                      y: 0,
+                      transition: {
+                        duration: 1.54,
                         delay: 0.2 + (index + 1) * 0.1,
                         ease: [0.43, 0.13, 0.23, 0.96],
                       },
@@ -83,19 +102,19 @@ const Home = () => {
                 ease: [0.43, 0.13, 0.23, 0.96],
               },
             }}
-            className="font-semibold text-center text-[#808080] mt-[19px] lg:text-[24px] lg:text-left"
+            className="font-semibold text-center text-[#808080] mt-[19px] md:text-[20px] lg:text-[24px] xl:text-left"
           >
             Let us help you unlock the full potential of your brand's social
             media presence and reach your target audience with ease.
           </motion.p>
         </article>
-        <figure className="grid grid-cols-2 w-[280px] lg:w-[500px] mx-auto max-w-lg lg:relative lg:bottom-[30px]">
+        <figure className="grid grid-cols-2 w-[280px] md:w-[400px] lg:w-[500px] mx-auto max-w-lg lg:relative lg:mt-[80px] xl:mt-0 lg:bottom-[30px]">
           <motion.img
             initial={{ y: -30, x: -30, scale: 0.6, opacity: 0 }}
             animate={{
               y: 0,
               x: 0,
-              scale: 1,
+              scale: 1.1,
               opacity: 1,
               transition: {
                 ease: [0.43, 0.13, 0.23, 0.96],
@@ -103,7 +122,7 @@ const Home = () => {
                 delay: 0.5,
               },
             }}
-            className="min-w-[140px] min-h-[140px] lg:w-[244px] relative lg:left-[20px] -z-10"
+            className="min-w-[140px] min-h-[140px] md:min-w-[200px] lg:w-[244px] relative lg:left-[20px] -z-10"
             src="/HomeHeroSection/instagram.png"
           />
           <motion.img
@@ -111,7 +130,7 @@ const Home = () => {
             animate={{
               y: 0,
               x: 0,
-              scale: 1,
+              scale: 1.1,
               opacity: 1,
               transition: {
                 ease: [0.43, 0.13, 0.23, 0.96],
@@ -119,7 +138,7 @@ const Home = () => {
                 delay: 0.5,
               },
             }}
-            className="min-w-[140px] min-h-[140px] lg:w-[244px] relative -z-10"
+            className="min-w-[140px] min-h-[140px] md:min-w-[200px] lg:w-[244px] relative -z-10"
             src="/HomeHeroSection/facebook.png"
           />
           <motion.img
@@ -127,7 +146,7 @@ const Home = () => {
             animate={{
               y: 0,
               x: 0,
-              scale: 1,
+              scale: 1.1,
               opacity: 1,
               transition: {
                 ease: [0.43, 0.13, 0.23, 0.96],
@@ -135,7 +154,7 @@ const Home = () => {
                 delay: 0.5,
               },
             }}
-            className="min-w-[140px] min-h-[140px] relative bottom-[20px] -z-10 lg:w-[244px] lg:bottom-[40px] lg:left-[20px]"
+            className="min-w-[140px] min-h-[140px] md:min-w-[200px] relative bottom-[20px] -z-10 lg:w-[244px] lg:bottom-[40px] lg:left-[20px]"
             src="/HomeHeroSection/twitter.png"
           />
           <motion.img
@@ -143,7 +162,7 @@ const Home = () => {
             animate={{
               y: 0,
               x: 0,
-              scale: 1,
+              scale: 1.1,
               opacity: 1,
               transition: {
                 ease: [0.43, 0.13, 0.23, 0.96],
@@ -151,7 +170,7 @@ const Home = () => {
                 delay: 0.5,
               },
             }}
-            className="min-w-[140px] min-h-[140px] relative bottom-[20px] -z-10 lg:w-[244px] lg:bottom-[40px]"
+            className="min-w-[140px] min-h-[140px] md:min-w-[200px] relative bottom-[20px] -z-10 lg:w-[244px] lg:bottom-[40px]"
             src="/HomeHeroSection/snapchat.png"
           />
         </figure>
