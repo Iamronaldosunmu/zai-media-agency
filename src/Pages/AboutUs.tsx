@@ -3,6 +3,7 @@ import TextSectionWithButton from "../components/TextSectionWithButton";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useIntersection } from "react-use";
+import CeoImage from "../assets/ceo-zma.png";
 
 const AboutUs = () => {
   const imageRef = useRef(null);
@@ -46,7 +47,7 @@ const AboutUs = () => {
         </p>
         <p>
           {" "}
-          Our agency, founded in 2021, specializes in creating comprehensive
+          Our agency, founded in 2023, specializes in creating comprehensive
           social media strategies, producing engaging content, and running
           targeted ad campaigns.{" "}
         </p>
@@ -80,7 +81,7 @@ const AboutUs = () => {
                   }
             }
             className="w-full max-w-[171px] lg:max-w-[300px]"
-            src="/ceo-zma.png"
+            src={CeoImage}
           />
         </div>
       </figure>
@@ -101,7 +102,8 @@ const AboutUs = () => {
         className="font-semibold lg:text-[19.5px] text-[grey] text-center flex flex-col gap-[24px] mt-[40px]"
       >
         <p>
-          Meet Adetona Adebanke, the founder and CEO of Zai social media agency.
+          Meet Adetona Zainab Adebanke, the founder and CEO of Zai social media
+          agency.
         </p>
         <p>
           {" "}
@@ -109,7 +111,7 @@ const AboutUs = () => {
           social media strategy and content creation.{" "}
         </p>
         <p>
-          Adebanke founded the agency in 2021 with the goal of helping small
+          Adebanke founded the agency in 2023 with the goal of helping small
           businesses navigate the ever-changing world of social media.
         </p>
       </motion.article>
