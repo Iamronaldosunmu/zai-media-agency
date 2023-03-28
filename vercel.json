@@ -1,12 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/home", "destination": "/home" },
-    { "source": "/about-us", "destination": "/about-us" },
-    { "source": "/contact-us", "destination": "/contact-us" },
-    {
-      "source": "/services-and-pricing",
-      "destination": "/services-and-pricing"
-    },
-    { "source": "/our-clients", "destination": "/our-clients" }
-  ]
+  "routes": [{ "src": "/[^.]+", "dest": "/home", "status": 200 }]
 }
