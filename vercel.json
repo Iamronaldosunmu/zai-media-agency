@@ -1,10 +1,10 @@
 {
-    "routes": [
-      { "src": "/", "dest": "/" },
-      { "src": "/home", "dest": "/home" },
-      { "src": "/about-us", "dest": "/about-us" }, 
-      { "src": "/contact-us", "dest": "/contact-us" }, 
-      { "src": "/our-clients", "dest": "/our-clients" }, 
-      { "src": "/services-and-pricing", "dest": "/services-and-pricing" }, 
-    ]
-  }
+  "routes": [
+    { "src": "/", "dest": "/" },
+    { "src": "/home", "dest": "/home" },
+    { "src": "/about-us", "dest": "/about-us" },
+    { "src": "/contact-us", "dest": "/contact-us" },
+    { "src": "/our-clients", "dest": "/our-clients" },
+    { "src": "/services-and-pricing", "dest": "/services-and-pricing" }
+  ]
+}
