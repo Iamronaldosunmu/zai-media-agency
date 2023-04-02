@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const ServicesAndPricing = () => {
   const services = [
     { serviceText: "Creative Direction", subtext: "" },
-    { serviceText: "Content Creation", subtext: "(reels, campaigns)" },
+    { serviceText: "Content Creation", subtext: "" },
     { serviceText: "Campaign Shoot", subtext: "(Depends on the project)" },
-    { serviceText: "Product Photography", subtext: "(Pictures or Reels)" },
+    { serviceText: "Product Photography", subtext: "" },
     { serviceText: "Email Marketing", subtext: "" },
     {
       serviceText: "Onsite Content Creation",
@@ -64,7 +64,7 @@ const ServicesAndPricing = () => {
               "Content creation (reels)",
               "User-generated content",
               "A monthly content calendar on Instagram",
-              "one month social media report",
+              "One month social media report",
             ]}
             price="125,000"
           />
@@ -74,7 +74,7 @@ const ServicesAndPricing = () => {
               "Content creation (reels)",
               "User-generated content",
               "A monthly content calendar on Instagram",
-              "one month social media report",
+              "One month social media report",
               "On-site Content Creation",
             ]}
             price="190,000"
