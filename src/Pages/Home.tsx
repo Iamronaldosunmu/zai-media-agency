@@ -4,6 +4,7 @@ import TextSectionWithButton from "../components/TextSectionWithButton";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useIntersection } from "react-use";
+import WhatWeDoSectionItem from "../components/WhatWeDoSectionItem";
 
 const Home = () => {
   return (
@@ -13,85 +14,37 @@ const Home = () => {
       exit={{ opacity: 0 }}
       className="px-[20px] lg:px-[60px] max-w-[1440px] mx-auto"
     >
-      <div className="xl:flex mt-[130px] lg:mt-[180px]">
-        <article className="xl:max-w-[727px]">
-          <header className="font-bold text-[32px] md:text-[48px] lg:text-[60px] xl:text-[72px] xl:max-w-[727px]   text-center lg:text-left lg:leading-[88px]">
-            <div className="overflow-hidden justify-center xl:justify-start flex gap-x-[11px] lg:gap-x-[24px]">
-              {"Ignite Your Social".split(" ").map((word: string, index: number) => (
-                <motion.div
-                  initial={{ y: 80 }}
-                  animate={{
-                    y: 0,
-                    transition: {
-                      duration: 0.54,
-                      delay: 0.2 + (index + 1) * 0.1,
-                      ease: [0.43, 0.13, 0.23, 0.96],
-                    },
-                  }}
-                >
-                  {word}
-                </motion.div>
-              ))}
-            </div>
-            <div className="overflow-hidden justify-center xl:justify-start flex gap-x-[11px] lg:gap-x-[24px]">
-              {"Media Presence"
+      <div className="xl:flex lg:items-center  mt-[130px] lg:mt-[180px]">
+        <article className="xl:max-w-[727px] relative lg:bottom-[30px]">
+          <header className="text-[37px] md:text-[46px] lg:text-[50px] xl:text-[65px] max-w-[360px] md:max-w-[400px] lg:max-w-[727px] mx-auto xl:max-w-[727px]   text-center lg:text-left lg:leading-[88px] ralewayFont font-normal flex flex-col">
+            <div className="overflow-hidden justify-center xl:justify-start flex gap-x-[6px] lg:gap-x-[24px] xl:gap-x-8 flex-wrap mb-[30px]">
+              {"WE WORK TO serve FASHION, BEAUTY, AND LIFESTYLE BRANDS TO BUILD THE SOCIAL MEDIA OF THEIR dreams"
                 .split(" ")
                 .map((word: string, index: number) => (
-                  <motion.div
-                    initial={{ y: 80 }}
-                    animate={{
-                      y: 0,
-                      transition: {
-                        duration: 0.84,
-                        delay: 0.2 + (index + 1) * 0.1,
-                        ease: [0.43, 0.13, 0.23, 0.96],
-                      },
-                    }}
-                  >
-                    {word}
-                  </motion.div>
-                ))}
-            </div>
-            <div className="overflow-hidden justify-center xl:justify-start flex gap-x-[11px] lg:gap-x-[24px]">
-              {"With Our Strategic"
-                .split(" ")
-                .map((word: string, index: number) => (
-                  <motion.div
-                    initial={{ y: 80 }}
-                    animate={{
-                      y: 0,
-                      transition: {
-                        duration: 1.34,
-                        delay: 0.2 + (index + 1) * 0.1,
-                        ease: [0.43, 0.13, 0.23, 0.96],
-                      },
-                    }}
-                  >
-                    {word}
-                  </motion.div>
-                ))}
-            </div>
-            <div className="overflow-hidden justify-center xl:justify-start flex gap-x-[11px] lg:gap-x-[24px]">
-              {"Expertise"
-                .split(" ")
-                .map((word: string, index: number) => (
-                  <motion.div
-                    initial={{ y: 80 }}
-                    animate={{
-                      y: 0,
-                      transition: {
-                        duration: 1.54,
-                        delay: 0.2 + (index + 1) * 0.1,
-                        ease: [0.43, 0.13, 0.23, 0.96],
-                      },
-                    }}
-                  >
-                    {word}
-                  </motion.div>
+                  <div className="overflow-hidden">
+                    <motion.div
+                      initial={{ y: 80 }}
+                      className={`leading-[43px] md:leading-[50px] lg:leading-[50px] xl:leading-[65px] ralewayFont ${
+                        word == "serve" || word == "dreams"
+                          ? "millionaireFont italic text-[43px] md:text-[50px] lg:text-[54px] xl:text-[72px]"
+                          : ""
+                      }`}
+                      animate={{
+                        y: 0,
+                        transition: {
+                          duration: 0.58,
+                          delay: 0.2 + (index + 1) * 0.08,
+                          ease: [0.43, 0.13, 0.23, 0.96],
+                        },
+                      }}
+                    >
+                      {word}
+                    </motion.div>
+                  </div>
                 ))}
             </div>
           </header>
-          <motion.p
+          {/* <motion.p
             initial={{ scale: 0.97, opacity: 0 }}
             animate={{
               opacity: 1,
@@ -106,7 +59,7 @@ const Home = () => {
           >
             Let us help you unlock the full potential of your brand's social
             media presence and reach your target audience with ease.
-          </motion.p>
+          </motion.p> */}
         </article>
         <figure className="grid grid-cols-2 w-[280px] md:w-[400px] lg:w-[500px] mx-auto max-w-lg lg:relative lg:mt-[80px] xl:mt-0 lg:bottom-[30px]">
           <motion.img
@@ -175,7 +128,6 @@ const Home = () => {
           />
         </figure>
       </div>
-
       <TextSectionWithButton
         paragraphs={[
           "We specialize in partnering with brands in the fashion, beauty, and lifestyle industries to elevate their digital presence and reach their target audience with a tailored strategy. ",
@@ -186,15 +138,31 @@ const Home = () => {
         buttonUrl="/about-us"
       />
       <TextSectionWithButton
-        paragraphs={[
-          "We are dedicated to adding value to every brand that we work with and we provide a large number of services to our clients.",
-          "From Social media development to creating Instagram posting calendars, content, brand launch campaigns, handling event management for brands, creative direction for campaign shoots, and on-site content creation, we offer services that are guaranteed to make your brand to stand out.",
-          "If you're ready to take your social media to the next level, we'd love to help.",
-        ]}
         header={"What We Do?"}
         buttonText={"SERVICES & PRICING"}
         buttonUrl={"/services-and-pricing"}
-      />
+      >
+        <div className="flex flex-col gap-[10px] lg:flex-row lg:mt-[50px]">
+          <WhatWeDoSectionItem
+            imageWidth={30}
+            text="How do you increase engagement?! Through quality & captivating videos in form of Instagram reeks and TikToks"
+            image="/WhatWeDoSection/instagramIcon.svg"
+            title="CONTENT CREATION"
+          />
+          <WhatWeDoSectionItem
+            imageWidth={25}
+            text="Never have to worry about when or what to post. We handle posting, scheduling, giveaways & copywriting"
+            image="/WhatWeDoSection/contentCreationIcon.png"
+            title="SOCIAL MEDIA MANAGEMENT"
+            />
+          <WhatWeDoSectionItem
+            imageWidth={25}
+            text="Showcase your products in the best light with our professional product photography service, offered by our social media agency."
+            image="/WhatWeDoSection/productPhotographyIcon.svg"
+            title="PRODUCT PHOTOGRAPHY"
+          />
+        </div>
+      </TextSectionWithButton>
       <TextSectionWithButton
         paragraphs={[
           "At Zai Media Agency, we've had the privilege of working with a wide range of clients in the fashion, beauty, and lifestyle industries.",
