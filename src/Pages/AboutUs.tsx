@@ -60,8 +60,8 @@ const AboutUs = () => {
           industries.
         </p>
       </motion.article>
-      <header className="mt-[100px] text-[32px] lg:text-[48px] font-bold mb-[30px] text-center">
-        Meet Our Founder
+      <header className="mt-[100px] max-w-[700px] mx-auto text-[28px] lg:text-[40px] font-bold lg:leading-[46px]  mb-[30px] text-center ralewayFont">
+        MEET ZAINAB, FOUNDER AND CEO <span className="millionaireFont italic text-[38px] lg:text-[64px] font-normal inline-block mr-2 leading-[48px]">of</span> ZAI MEDIA AGENCY
       </header>
       <figure className="flex justify-center mt-[15px]">
         <div className="w-full max-w-[171px] lg:max-w-[300px] overflow-hidden">
