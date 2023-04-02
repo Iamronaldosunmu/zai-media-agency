@@ -3,8 +3,9 @@ import SelectInputGroup from "../components/SelectInputGroup";
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 import { toast } from "react-toastify";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Joi from "joi";
+import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
   const [state, handleSubmit] = useForm("xbjeabvg");
@@ -24,7 +25,8 @@ const ContactUs = () => {
     servicesNeeded: "",
     message: "",
   });
-  const handleFormSubmit = (e: any) => {
+  const form = useRef(null);
+  const handleFormSubmit = (e) => {
     e.preventDefault();
 
     if (
@@ -40,6 +42,21 @@ const ContactUs = () => {
       servicesNeeded
     ) {
       handleSubmit(e);
+      emailjs
+        .sendForm(
+          "service_6hb4odp",
+          "template_63m6yk8",
+          form.current,
+          "RIxYKMqXZJUphpre-"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
     }
   };
   useEffect(() => {
@@ -56,7 +73,7 @@ const ContactUs = () => {
     }
   }, [state.submitting]);
 
-  const validateName = (value: string) => {
+  const validateName = (value) => {
     const schema = Joi.object({
       name: Joi.string().min(5).max(30).required().label("Name"),
     });
@@ -68,7 +85,7 @@ const ContactUs = () => {
     }
   };
 
-  const validateBrandName = (value: string) => {
+  const validateBrandName = (value) => {
     const schema = Joi.object({
       brandName: Joi.string().min(5).max(30).required().label("Brand Name"),
     });
@@ -80,7 +97,7 @@ const ContactUs = () => {
     }
   };
 
-  const validatePhoneNumber = (value: string) => {
+  const validatePhoneNumber = (value) => {
     const schema = Joi.object({
       phoneNumber: Joi.number().required().label("Phone Number"),
     });
@@ -92,7 +109,7 @@ const ContactUs = () => {
     }
   };
 
-  const validateEmailAddress = (value: string) => {
+  const validateEmailAddress = (value) => {
     const schema = Joi.object({
       email: Joi.string()
         .email({ tlds: { allow: false }, minDomainSegments: 2 })
@@ -128,6 +145,7 @@ const ContactUs = () => {
         <p className="text-[20px]">zaimediaagency@gmail.com</p>
       </section>
       <form
+        ref={form}
         onSubmit={handleFormSubmit}
         className="flex flex-col gap-[10px] lg:gap-[30px] mt-[10px]"
       >
