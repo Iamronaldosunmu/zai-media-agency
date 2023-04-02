@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 interface TextSectionWithButtonProps {
   header: string;
-  paragraphs: string[];
+  paragraphs?: string[];
   buttonText: string;
   buttonUrl: string;
   children?: JSX.Element;
@@ -53,7 +53,7 @@ const TextSectionWithButton: React.FC<TextSectionWithButtonProps> = ({
       <header className="text-[32px] lg:text-[48px] font-bold mb-[30px] text-center">
         {header}
       </header>
-      {paragraphs.map((paragraph: string, index: number) => (
+      {paragraphs?.map((paragraph: string, index: number) => (
         <p className="mb-[24px] md:text-[20px] lg:text-[19.5px] font-semibold text-[grey] text-center">
           {paragraph}
         </p>
