@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import WhiteLogo from "../../assets/whitelogo.png";
 
 const Loader = () => {
   const navigate = useNavigate();
   const [animationCompleted, setAnimationCompleted] = useState(false);
   return (
     <motion.main
-      animate={{ opacity: animationCompleted ? 0 : 1 }}
-      className=" bg-white absolute top-0 right-0 left-0 bottom-0 flex items-center justify-center"
+      animate={{
+        opacity: animationCompleted ? 0 : 1,
+        transition: { duration: 0.3 },
+      }}
+      className=" absolute top-0 right-0 left-0 bottom-0 flex items-center justify-center"
     >
       <motion.img
         onAnimationComplete={() => {
@@ -22,7 +26,7 @@ const Loader = () => {
           transition: { duration: 2.5 },
         }}
         className="lg:w-[200px]"
-        src="/whitelogo.png"
+        src={WhiteLogo}
       />
     </motion.main>
   );
