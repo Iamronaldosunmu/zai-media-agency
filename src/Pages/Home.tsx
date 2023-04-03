@@ -145,7 +145,7 @@ const Home = () => {
         <div className="flex flex-col gap-[10px] lg:flex-row lg:mt-[50px]">
           <WhatWeDoSectionItem
             imageWidth={30}
-            text="How do you increase engagement?! Through quality & captivating videos in form of Instagram reeks and TikToks"
+            text="How do you increase engagement?! Through quality & captivating videos in form of Instagram reels and TikTok"
             image="/WhatWeDoSection/instagramIcon.svg"
             title="CONTENT CREATION"
           />
