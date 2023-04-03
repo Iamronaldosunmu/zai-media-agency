@@ -98,7 +98,7 @@ const Footer = () => {
         "
         >
           <a
-            href="https:instagram.com/zaimediaagency"
+            href="https://instagram.com/zaimediaagency"
             rel="noreferrer"
             target="_blank"
             className="flex justify-center items-center gap-[5px] border-b underline"
