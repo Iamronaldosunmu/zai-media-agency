@@ -102,17 +102,13 @@ const AboutUs = () => {
         className="font-semibold lg:text-[19.5px] text-[grey] text-center flex flex-col gap-[24px] mt-[40px]"
       >
         <p>
-          Meet Adetona Zainab Adebanke, the founder and CEO of Zai social media
-          agency.
-        </p>
-        <p>
           {" "}
           With over 5 years of experience in the field, with experience in
           social media strategy and content creation.{" "}
         </p>
         <p>
-          Adebanke founded the agency in 2023 with the goal of helping small
-          businesses navigate the ever-changing world of social media.
+          Adebanke Zainab Adetona founded the agency in 2023 with the goal of helping small
+          businesses navigate the ever-changing world of social media.
         </p>
       </motion.article>
       <TextSectionWithButton
