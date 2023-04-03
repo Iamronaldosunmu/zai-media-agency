@@ -14,16 +14,14 @@ import ServicesAndPricing from "./Pages/ServicesAndPricing";
 import OurClients from "./Pages/OurClients";
 import { AnimatePresence } from "framer-motion";
 import Loader from "./components/Loader";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const location = useLocation();
   useEffect(() => {
-    setTimeout(() => window.scrollTo(0, 0), 300)
-    
+    setTimeout(() => window.scrollTo(0, 0), 300);
   }, [location.pathname]);
-
 
   return (
     <div className="App">
