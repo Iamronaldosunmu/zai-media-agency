@@ -42,7 +42,7 @@ const Footer = () => {
               <span>zaimedaagency@gmail.com</span>
             </a>
             <a
-              href="https:instagram.com/zaimediaagency"
+              href="https://instagram.com/zaimediaagency"
               rel="noreferrer"
               target="_blank"
               className="lg:flex items-center gap-[5px] hidden "
